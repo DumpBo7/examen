@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cosmos Daily | NASA Explorer</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="bgContainer" class="bg-container"></div>
+        <div class="bg-overlay"></div>
+
+        <nav>
+            <div class="nav-content">
+                <span class="logo">Cosmos<strong>Daily</strong></span>
+                <div class="search-group">
+                    <label for="dateInput" class="date-label">View Date:</label>
+                    <input
+                        type="date"
+                        id="dateInput"
+                        aria-label="Select a date to view cosmic imagery"
+                    />
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <div class="loader" id="loader"></div>
+
+            <article class="apod-card" id="apodCard">
+                <button id="minimizeBtn" class="icon-btn" title="Minimize">
+                    &times;
+                </button>
+                <div class="card-body">
+                    <div class="card-header">
+                        <h2 id="imageTitle"></h2>
+                        <span id="imageDate" class="date-badge"></span>
+                    </div>
+                    <div class="scroll-area">
+                        <p id="imageDescription"></p>
+                    </div>
+                    <div class="card-footer">
+                        <span id="imageCopyright"></span>
+                    </div>
+                </div>
+            </article>
+
+            <button id="restoreBtn" class="restore-circle" title="Show Details">
+                <span>&#128712;</span>
+            </button>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
