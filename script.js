@@ -87,3 +87,13 @@ window.addEventListener("DOMContentLoaded", () => {
     dateInput.value = today;
     fetchApod(today);
 });
+
+// Event Listener para adjuntar el Service Worker (sw.js), para la PWA
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("sw.js")
+            .then((reg) => console.log("Service Worker Registered!"))
+            .catch((err) => console.log("Registration Failed", err));
+    });
+}
